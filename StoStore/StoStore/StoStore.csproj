@@ -88,6 +88,7 @@
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Repository\EFDbContext.cs" />
+    <Compile Include="Models\Repository\Repository.cs" />
     <Compile Include="Models\Services.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

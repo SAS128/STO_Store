@@ -23,6 +23,6 @@ namespace StoStore.Models
 			this.Status = Status_;
 			this.Cart_Id = Cart_Id_;
 		}
-		public virtual IEnumerable<Cart> Carts { get; set; }
+		public virtual IEnumerable<Cart> Cart { get; set; }
 	}
 }

@@ -19,6 +19,6 @@ namespace StoStore.Models
 			this.Price = Price_;
 			this.Service_ServiceId = Service_ServiceId_;
 		}
-		public virtual IEnumerable<Service> Services { get; set; }
+		public virtual IEnumerable<Service> Service { get; set; }
 	}
 }

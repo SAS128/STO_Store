@@ -12,6 +12,10 @@ namespace StoStore.Models
 		public string CarType { get; set; }
 		public string CarColor { get; set; }
 
+		public Car()
+		{
+			
+		}
 		public Car(int CarId_, string CarName_, string CarType_, string CarColor_)
 		{
 			this.CarId = CarId_;

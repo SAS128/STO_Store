@@ -8,6 +8,7 @@ namespace StoStore.Models.Repository
 {
     public class EFDbContext : DbContext
     {
+
         public DbSet<Car> Car { get; set; }
         public DbSet<Cart> Cart { get; set; }
         public DbSet<Category> Category { get; set; }

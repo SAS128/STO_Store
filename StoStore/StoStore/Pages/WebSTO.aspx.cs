@@ -20,7 +20,7 @@ namespace StoStore.Pages
         {
             get
             {
-                int prodCount = FilterCLIENT().Count();
+                int prodCount = FilterCategory().Count();
                 return (int)Math.Ceiling((decimal)prodCount / pageSize);
             }
         }
@@ -43,22 +43,22 @@ namespace StoStore.Pages
         }
 
 
-        public IEnumerable<CLIENT> GetCLIENT()
+        public IEnumerable<Category> GetCategory()
         {
-            return FilterCLIENT().
-                OrderBy(g => g.CLIENT_ID).
+            return FilterCategory().
+                OrderBy(g => g.CategoryId).
                 Skip((CurrentPage - 1) * pageSize).
                 Take(pageSize);
         }
 
         //метод фильтрации по каттегории
-        private IEnumerable<CLIENT> FilterCLIENT()
+        private IEnumerable<Category> FilterCategory()
         {
-            IEnumerable<CLIENT> CLIENT = repository.CLIENT;
-            string currentCategory = (string)RouteData.Values["STATUS"] ??
-                Request.QueryString["STATUS"];
-            return currentCategory == null ? CLIENT :
-                CLIENT.Where(p => p.STATUS == currentCategory);
+            IEnumerable<Category> Category = repository.Category;
+            string currentCategory = (string)RouteData.Values["Name"] ??
+                Request.QueryString["Name"];
+            return currentCategory == null ? Category :
+                Category.Where(p => p.Name == currentCategory);
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -67,7 +67,7 @@ namespace StoStore.Pages
                 int selectedDetailsId;
                 if (int.TryParse(Request.Form["add"], out selectedDetailsId))
                 {
-                    CLIENT detailsGame = repository.CLIENT.Where(g => g.CLIENT_ID == selectedDetailsId).FirstOrDefault();
+                    Category detailsGame = repository.Category.Where(g => g.CategoryId == selectedDetailsId).FirstOrDefault();
                     if (detailsGame != null)
                     {
                        

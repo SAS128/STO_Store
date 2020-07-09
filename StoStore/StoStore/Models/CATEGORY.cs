@@ -10,6 +10,10 @@ namespace StoStore.Models
 		public int CategoryId { get; set; }
 		public string Name { get; set; }
 
+		public Category()
+		{
+			
+		}
 		public Category(int CategoryId_, string Name_)
 		{
 			this.CategoryId = CategoryId_;

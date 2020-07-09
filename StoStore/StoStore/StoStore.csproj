@@ -74,26 +74,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Styles.css" />
+    <Content Include="Pages\WebSTO.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CAR.cs" />
+    <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Cart.cs" />
-    <Compile Include="Models\Cart_Order.cs" />
-    <Compile Include="Models\CATEGORY.cs" />
-    <Compile Include="Models\CLIENT.cs" />
-    <Compile Include="Models\Goods.cs" />
-    <Compile Include="Models\Masters.cs" />
-    <Compile Include="Models\Masters_Services.cs" />
-    <Compile Include="Models\Orders.cs" />
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Good.cs" />
+    <Compile Include="Models\Master.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Repository\EFDbContext.cs" />
     <Compile Include="Models\Repository\Repository.cs" />
-    <Compile Include="Models\Services.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Pages\Helpers\SessionHelper.cs" />
+    <Compile Include="Pages\Store.Master.cs">
+      <DependentUpon>Store.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Store.Master.designer.cs">
+      <DependentUpon>Store.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebSTO.aspx.cs">
+      <DependentUpon>WebSTO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebSTO.aspx.designer.cs">
+      <DependentUpon>WebSTO.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Pages\Store.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -102,9 +117,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\" />
     <Folder Include="Controls\" />
-    <Folder Include="Pages\Helpers\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>

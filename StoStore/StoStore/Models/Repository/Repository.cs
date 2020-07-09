@@ -7,17 +7,19 @@ namespace StoStore.Models.Repository
 {
     public class Repository
     {
+
+
+
         private EFDbContext context = new EFDbContext();
-       
-        public IEnumerable<CAR> CARS { get { return context.CARS; } }
-        public IEnumerable<Cart> Carts { get { return context.Carts; } }
-        public IEnumerable<Cart_Order> Cart_Orders { get { return context.Cart_Orders; } }
-        public IEnumerable<CATEGORY> CATEGORYS { get { return context.CATEGORYS; } }
-        public IEnumerable<CLIENT> CLIENTS { get { return context.CLIENTS; } }
-        public IEnumerable<Goods> Goodss { get { return context.Goodss; } }
-        public IEnumerable<Masters> Masterss { get { return context.Masterss; } }
-        public IEnumerable<Masters_Services> Masters_Servicess { get { return context.Masters_Servicess; } }
-        public IEnumerable<Orders> Orderss { get { return context.Orderss; } }
-        public IEnumerable<Product> Products { get { return context.Products; } }
-        public IEnumerable<Services> Servicess { get { return context.Servicess; } }
+
+        public IEnumerable<Car> Car { get { return context.Car; } }
+        public IEnumerable<Cart> Cart { get { return context.Cart; } }
+        public IEnumerable<Category> Category { get { return context.Category; } }
+        public IEnumerable<Client> Client { get { return context.Client; } }
+        public IEnumerable<Good> Good { get { return context.Good; } }
+        public IEnumerable<Master> Master { get { return context.Master; } }
+        public IEnumerable<Order> Order { get { return context.Order; } }
+        public IEnumerable<Service> Service { get { return context.Service; } }
+
     }
+}

@@ -5,21 +5,19 @@ using System.Web;
 
 namespace StoStore.Models
 {
-	public class CAR
+	public class Car
 	{
-		public int CAR_ID { get; set; }
-		public string CARNAME { get; set; }
-		public string CARTYPE { get; set; }
-		public string CARCOLOR { get; set; }
-		public int CLIENT_ID { get; set; }
+		public int CarId { get; set; }
+		public string CarName { get; set; }
+		public string CarType { get; set; }
+		public string CarColor { get; set; }
 
-		public CAR(int CAR_ID_, string CARNAME_, string CARTYPE_, string CARCOLOR_, int CLIENT_ID_)
+		public Car(int CarId_, string CarName_, string CarType_, string CarColor_)
 		{
-			this.CAR_ID = CAR_ID_;
-			this.CARNAME = CARNAME_;
-			this.CARTYPE = CARTYPE_;
-			this.CARCOLOR = CARCOLOR_;
-			this.CLIENT_ID = CLIENT_ID_;
+			this.CarId = CarId_;
+			this.CarName = CarName_;
+			this.CarType = CarType_;
+			this.CarColor = CarColor_;
 		}
 	}
 }

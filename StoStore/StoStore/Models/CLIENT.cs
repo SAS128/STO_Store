@@ -5,25 +5,23 @@ using System.Web;
 
 namespace StoStore.Models
 {
-	public class CLIENT
+	public class Client
 	{
-		public int CLIENT_ID { get; set; }
-		public string FNAME { get; set; }
-		public string LNAME { get; set; }
-		public string PHONE { get; set; }
-		public string ADRESS { get; set; }
-		public string STATUS { get; set; }
-		public decimal CASH { get; set; }
+		public int ClientId { get; set; }
+		public string Fio { get; set; }
+		public string Phone { get; set; }
+		public string Adress { get; set; }
+		public bool Status { get; set; }
+		public int Cart_Id { get; set; }
 
-		public CLIENT(int CLIENT_ID_, string FNAME_, string LNAME_, string PHONE_, string ADRESS_, string STATUS_, decimal CASH_)
+		public Client(int ClientId_, string Fio_, string Phone_, string Adress_, bool Status_, int Cart_Id_)
 		{
-			this.CLIENT_ID = CLIENT_ID_;
-			this.FNAME = FNAME_;
-			this.LNAME = LNAME_;
-			this.PHONE = PHONE_;
-			this.ADRESS = ADRESS_;
-			this.STATUS = STATUS_;
-			this.CASH = CASH_;
+			this.ClientId = ClientId_;
+			this.Fio = Fio_;
+			this.Phone = Phone_;
+			this.Adress = Adress_;
+			this.Status = Status_;
+			this.Cart_Id = Cart_Id_;
 		}
 	}
 }

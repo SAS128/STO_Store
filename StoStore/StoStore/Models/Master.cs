@@ -5,14 +5,14 @@ using System.Web;
 
 namespace StoStore.Models
 {
-	public class Category
+	public class Master
 	{
-		public int CategoryId { get; set; }
+		public int MasterId { get; set; }
 		public string Name { get; set; }
 
-		public Category(int CategoryId_, string Name_)
+		public Master(int MasterId_, string Name_)
 		{
-			this.CategoryId = CategoryId_;
+			this.MasterId = MasterId_;
 			this.Name = Name_;
 		}
 	}

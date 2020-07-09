@@ -7,13 +7,17 @@ namespace StoStore.Models
 {
 	public class Cart
 	{
-		public int Id { get; set; }
-		public int OrderId { get; set; }
+		public int CartId { get; set; }
+		public string SessionKey { get; set; }
+		public decimal Price { get; set; }
+		public int Service_ServiceId { get; set; }
 
-		public Cart(int Id_, int OrderId_)
+		public Cart(int CartId_, string SessionKey_, decimal Price_, int Service_ServiceId_)
 		{
-			this.Id = Id_;
-			this.OrderId = OrderId_;
+			this.CartId = CartId_;
+			this.SessionKey = SessionKey_;
+			this.Price = Price_;
+			this.Service_ServiceId = Service_ServiceId_;
 		}
 	}
 }

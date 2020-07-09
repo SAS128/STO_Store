@@ -15,5 +15,7 @@ namespace StoStore.Models
 			this.OrderId = OrderId_;
 			this.Good_Id = Good_Id_;
 		}
+		public virtual IEnumerable<Order> Orders { get; set; }
+		public virtual IEnumerable<Good> Goods { get; set; }
 	}
 }

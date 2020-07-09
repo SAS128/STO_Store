@@ -23,5 +23,8 @@ namespace StoStore.Models
 			this.MasterId = MasterId_;
 			this.CarId = CarId_;
 		}
+		public virtual IEnumerable<Category> Categorys { get; set; }
+		public virtual IEnumerable<Master> Master { get; set; }
+		public virtual IEnumerable<Car> Cars { get; set; }
 	}
 }
